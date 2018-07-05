@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zakaratcha/nl2brX.git"
+    "url": "https://github.com/zakaratcha/nl2br-x.git"
   },
   "keywords": [
     "nl2br",
@@ -21,7 +21,7 @@
   "author": "zakaratcha <zakaratcha@ya.ru>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zakaratcha/nl2brX/issues"
+    "url": "https://github.com/zakaratcha/nl2br-x/issues"
   },
-  "homepage": "https://github.com/zakaratcha/nl2brX"
+  "homepage": "https://github.com/zakaratcha/nl2br-x"
 }

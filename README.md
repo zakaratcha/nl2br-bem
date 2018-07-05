@@ -1,4 +1,4 @@
-# nl2br-bemxjst
+# nl2brX
 
 JS module for converting newlines to line breaks in BEMHTML and BEMTREE syntaxe
 
