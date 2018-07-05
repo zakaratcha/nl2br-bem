@@ -1,8 +1,15 @@
 (function () {
     var nl2brX = function (str) {
         var br = {tag: 'br'};
+        var arr = str.split(/[(\r\n)|(\n\r)|\r|\n]+/g);
+        var resArr = [arr[0]];
 
-        return str.split(/[(\r\n)|(\n\r)|\r|\n]+/g).map((subStr, i) => i ? [br, subStr] : subStr);
+        for (var i = 1; i < arr.length; i++) {
+            resArr.push(br);
+            resArr.push(arr[i]);
+        }
+
+        return resArr;
     };
 
     if (typeof module === 'object' && typeof module.exports === 'object') {

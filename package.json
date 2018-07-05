@@ -1,6 +1,6 @@
 {
   "name": "nl2br-bemxjst",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "JS module for converting newlines to line breaks in BEMHTML and BEMTREE syntaxe",
   "main": "index.js",
   "scripts": {
