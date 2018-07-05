@@ -2,7 +2,7 @@
 
 JS module for converting newlines to line breaks in BEMHTML and BEMTREE syntaxe
 
-##Install
+## Install
 
 ```
 $ npm install nl2br-bemxjst
