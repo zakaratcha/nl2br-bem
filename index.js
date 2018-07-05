@@ -17,7 +17,7 @@
     }
 
     if (typeof modules === 'object' && typeof modules.define === 'function') {
-        modules.define('nl2brX', function (provide) {
+        modules.define('nl2br-x', function (provide) {
             provide(nl2brX);
         });
     }
