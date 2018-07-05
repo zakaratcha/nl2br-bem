@@ -5,11 +5,11 @@ JS module for converting newlines to line breaks in BEMHTML and BEMTREE syntaxe
 ## Install
 
 ```
-$ npm install nl2br-bemxjst
+$ npm install nl2br-x
 ```
 ## Example
 ```javascript
-const nl2brX  = require('nl2br-bemxjst');
+const nl2brX  = require('nl2br-x');
 
 console.log(nl2brX(`Hello
 world
