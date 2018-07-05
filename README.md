@@ -9,4 +9,7 @@ $ npm install nl2br-bemxjst
 ```
 ## Example ##
 ```javascript
-var nl2br  = require('nl2br-bemxjst');
+const nl2brX  = require('nl2br-bemxjst');
+console.log(nl2brX(`Hello
+world
+!!!`)); // ['Hello', {tag: 'br'}, 'world', {tag: 'br'}, '!!!']
