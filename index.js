@@ -3,7 +3,7 @@
     var nlRegEx = /[(\r\n)|(\n\r)|\r|\n]+/g;
     
     /**
-     * Converting newlines to line breaks object in BEMJSON syntaxe
+     * Converting newlines to line breaks object in BEMJSON syntax
      * 
      * @param str {string}
      * @returns {array}
