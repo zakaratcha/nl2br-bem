@@ -1,16 +1,19 @@
 (function () {
-    var nl2brX = function (str) {
-        var br = {tag: 'br'};
-        var arr = str.split(/[(\r\n)|(\n\r)|\r|\n]+/g);
-        var resArr = [arr[0]];
+    var br = {tag: 'br'};
+    var nlRegEx = /[(\r\n)|(\n\r)|\r|\n]+/g;
 
-        for (var i = 1; i < arr.length; i++) {
-            resArr.push(br);
-            resArr.push(arr[i]);
-        }
+    function nl2brX(str) {
+        return str.split(nlRegEx)
+            .reduce(function (acc, item, idx, arr) {
+                acc.push(item);
 
-        return resArr;
-    };
+                if (idx < arr.length - 1)  {
+                    acc.push(br);
+                }
+
+                return acc;
+            }, []);
+    }
 
     if (typeof module === 'object' && typeof module.exports === 'object') {
         module.exports = nl2brX;
