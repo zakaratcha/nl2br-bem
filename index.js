@@ -5,10 +5,10 @@
     /**
      * Converting newlines to line breaks object in BEMJSON syntaxe
      * 
-     * @param {} 
+     * @param str {string}
      * @returns {array}
      */
-    function nl2brX(str, maxEmtyLines) {
+    function nl2brX(str) {
         var arr = str.split(nlRegEx);
         var resArr = [arr[0]];
 
