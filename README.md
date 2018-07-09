@@ -1,6 +1,6 @@
 # nl2brX
 
-JS module for converting newlines to line breaks in BEMHTML and BEMTREE syntaxe
+JS module for converting newlines to line breaks in BEMHTML and BEMTREE syntax.
 
 ## Install
 
