@@ -1,18 +1,23 @@
 (function () {
     var br = {tag: 'br'};
     var nlRegEx = /[(\r\n)|(\n\r)|\r|\n]+/g;
+    
+    /**
+     * Converting newlines to line breaks object in BEMJSON syntaxe
+     * 
+     * @param {} 
+     * @returns {array}
+     */
+    function nl2brX(str, maxEmtyLines) {
+        var arr = str.split(nlRegEx);
+        var resArr = [arr[0]];
 
-    function nl2brX(str) {
-        return str.split(nlRegEx)
-            .reduce(function (acc, item, idx, arr) {
-                acc.push(item);
+        for (var i = 1; i < arr.length; i++) {
+            resArr.push(br);
+            resArr.push(arr[i]);
+        }
 
-                if (idx < arr.length - 1)  {
-                    acc.push(br);
-                }
-
-                return acc;
-            }, []);
+        return resArr;
     }
 
     if (typeof module === 'object' && typeof module.exports === 'object') {
