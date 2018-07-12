@@ -16,11 +16,13 @@ describe('nl2br-x', function() {
     });
 
     it('should drop empty lines', function() {
-        assert.deepEqual(nl2brX('hello,\n   \nBEM!\n\n \n ', true), ['hello,', {tag: 'br'}, 'BEM!']);
+        assert.deepEqual(nl2brX('\nhello,\n   \nBEM!\n\n \n ', true), ['hello,', {tag: 'br'}, 'BEM!']);
     });
 
     it('should not drop empty lines if it not asked', function() {
-        assert.deepEqual(nl2brX('hello,\n   \nBEM!\n\n \n '), [
+        assert.deepEqual(nl2brX('\nhello,\n   \nBEM!\n\n \n '), [
+            '',
+            {tag: 'br'},
             'hello,',
             {tag: 'br'},
             '   ',
@@ -34,4 +36,6 @@ describe('nl2br-x', function() {
             ' '
         ]);
     });
+
+
 });

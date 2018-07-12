@@ -10,12 +10,16 @@
      */
     function nl2brX(str, dropEmptyLines) {
         var arr = str.split('\n');
-        var resArr = [arr[0]];
+        var resArr = [];
+        var flag = false;
 
-        for (var i = 1; i < arr.length; i++) {
+        for (var i = 0; i < arr.length; i++) {
             if (!dropEmptyLines || arr[i].trim()) {
-                resArr.push(br);
+                if (flag) {
+                    resArr.push(br);
+                }
                 resArr.push(arr[i]);
+                flag = true;
             }
         }
 
