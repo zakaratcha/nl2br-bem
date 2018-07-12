@@ -1,20 +1,22 @@
 (function () {
     var br = {tag: 'br'};
-    var nlRegEx = /[(\r\n)|(\n\r)|\r|\n]+/g;
-    
+
     /**
      * Converting newlines to line breaks object in BEMJSON syntax
      * 
-     * @param str {string}
+     * @param {string} str
+     * @param {boolean} [dropEmptyLines]
      * @returns {array}
      */
-    function nl2brX(str) {
-        var arr = str.split(nlRegEx);
+    function nl2brX(str, dropEmptyLines) {
+        var arr = str.split('\n');
         var resArr = [arr[0]];
 
         for (var i = 1; i < arr.length; i++) {
-            resArr.push(br);
-            resArr.push(arr[i]);
+            if (!dropEmptyLines || arr[i].trim()) {
+                resArr.push(br);
+                resArr.push(arr[i]);
+            }
         }
 
         return resArr;
